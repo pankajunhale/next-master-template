@@ -5,6 +5,7 @@ pipeline {
     }
     environment {
         BASE_URL = 'http://my-predefined-username-password'
+        MY_WORKSPACE = ${WORKSPACE}+"/build"
     }
     stages {
         stage("Build") {
@@ -17,8 +18,8 @@ pipeline {
             steps {
                 echo "deploying to go daddy"   
                 echo "WP:${WORKSPACE}"
-                echo "URL:${BASE_URL}"
-                sh "cp -r ${WORKSPACE}/build C:/Inetpub/BizERP1_Sln/"            
+                echo "MY-WP:${MY_WORKSPACE}"
+                echo "URL:${BASE_URL}"                
             }
         }
     }
