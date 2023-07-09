@@ -23,6 +23,7 @@ pipeline {
                 echo "WP:${WORKSPACE}"
                 echo "MY-WP:${MY_WORKSPACE}"
                 echo "URL:${BASE_URL}"
+                sh "rm -rf ${MY_WORKSPACE}/.git"
                 sh "cp -r ${MY_WORKSPACE} ${MY_DESTINATION_PATH}"               
             }
         }
