@@ -5,7 +5,7 @@ pipeline {
     }
     environment {
         BASE_URL = 'http://my-predefined-username-password'
-        MY_WORKSPACE = "C:/Users/finecopia/AppData/Local/Jenkins/.jenkins/workspace/study-next-app"
+        MY_WORKSPACE = "C:/Users/finecopia/AppData/Local/Jenkins/.jenkins/workspace/study-next-app/"
         MY_DESTINATION_PATH = "C:/Inetpub/BizERP1_Sln/"
     }
     stages {
