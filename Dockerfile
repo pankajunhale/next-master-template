@@ -1,4 +1,4 @@
-Fetching the latest node image on apline linux
+#Fetching the latest node image on apline linux
 FROM node:latest AS build
 
 # Declaring env

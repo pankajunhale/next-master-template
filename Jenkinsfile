@@ -3,13 +3,14 @@ pipeline {
      stages {
         stage("Build") {
             steps {
-               sh "npm install"  
-               sh "npm run build"  
+               echo "npm install"  
+               echo "npm run build"  
             }
         }
         stage("Deploy") {
             steps {
-                echo "deploying to go daddy"                
+                echo "deploying to go daddy"   
+                echo "WP:${WORKSPACE}"             
             }
         }
     }
