@@ -26,7 +26,7 @@ pipeline {
                 sh "rm -rf ${MY_WORKSPACE}/.git"
                 sh "cp -r ${MY_WORKSPACE} ${MY_DESTINATION_PATH}"     
                 echo "start app serveice using pm2"
-                sh "npm run pm2:start:dev"            
+                sh "npm run start"            
             }
         }
     }
