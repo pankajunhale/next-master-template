@@ -10,7 +10,8 @@ pipeline {
         stage("Deploy") {
             steps {
                 echo "deploying to go daddy"   
-                echo "WP:${WORKSPACE}"             
+                echo "WP:${WORKSPACE}" 
+                sh "cp -r ${WORKSPACE}/study-next-app/build C:/Inetpub/BizERP1_Sln/"            
             }
         }
     }
