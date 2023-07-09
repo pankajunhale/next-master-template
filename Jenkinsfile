@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo "deploying to go daddy"   
                 echo "WP:${WORKSPACE}" 
-                sh "cp -r ${WORKSPACE}\study-next-app\build C:/Inetpub/BizERP1_Sln/"            
+                sh "cp -r ${WORKSPACE}\\study-next-app\\build C:/Inetpub/BizERP1_Sln/"            
             }
         }
     }
