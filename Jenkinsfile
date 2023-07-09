@@ -5,14 +5,16 @@ pipeline {
     }
     environment {
         BASE_URL = 'http://my-predefined-username-password'
-        MY_WORKSPACE = "C:/Users/finecopia/AppData/Local/Jenkins/.jenkins/workspace/study-next-app/build"
+        MY_WORKSPACE = "C:/Users/finecopia/AppData/Local/Jenkins/.jenkins/workspace/study-next-app"
         MY_DESTINATION_PATH = "C:/Inetpub/BizERP1_Sln/"
     }
     stages {
         stage("Build") {
             steps {
                echo "npm install"  
+               sh "npm install"
                echo "npm run build"  
+               sh "npm run build"  
             }
         }
         stage("Deploy") {
