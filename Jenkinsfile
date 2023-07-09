@@ -1,6 +1,12 @@
 pipeline {
-     agent any
-     stages {
+    agent any
+    options {
+        timeout(time: 1, unit: 'HOURS') 
+    }
+    environment {
+        BASE_URL = 'http://my-predefined-username-password'
+    }
+    stages {
         stage("Build") {
             steps {
                echo "npm install"  
@@ -10,8 +16,9 @@ pipeline {
         stage("Deploy") {
             steps {
                 echo "deploying to go daddy"   
-                echo "WP:${WORKSPACE}" 
-                sh 'cp -r ${WORKSPACE}/study-next-app/build C:/Inetpub/BizERP1_Sln/'            
+                echo "WP:${WORKSPACE}"
+                echo "URL:${BASE_URL}"
+                sh "cp -r ${WORKSPACE}/build C:/Inetpub/BizERP1_Sln/"            
             }
         }
     }
