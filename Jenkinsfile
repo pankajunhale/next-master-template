@@ -5,7 +5,7 @@ pipeline {
     }
     environment {
         BASE_URL = 'http://my-predefined-username-password'
-        MY_WORKSPACE = '${WORKSPACE}/build'
+        MY_WORKSPACE = "${WORKSPACE}/build"
     }
     stages {
         stage("Build") {
